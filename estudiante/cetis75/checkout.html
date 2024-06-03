@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="">
+    <meta name="description" content="Justin Food | Checkout">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
     <!-- Title -->
-    <title>Justin Food | Cetis 75</title>
+    <title>Justin Food | Checkout</title>
 
     <!-- Favicon -->
     <link rel="icon" href="../../img/core-img/favicon.ico">
@@ -26,9 +24,27 @@
     <link href="owl.carousel.min.css" rel="stylesheet">
     <link href="pe-icon-7-stroke.css" rel="stylesheet">
     <link href="barra.css" rel="stylesheet">
+    <style>
+        /* Estilo para el botón de regresar */
+        .btn-back {
+            background-color: #00000000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
+        .btn-back:hover {
+            background-color: #00000000;
+            color: #ddd;
+        }
 
-
+        /* Estilo para el ícono dentro del botón */
+        .btn-back i {
+            margin-right: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,30 +58,15 @@
         </div>
     </div>
 
-    <!-- ***** Search Form Area ***** -->
-    <div class="caviar-search-form d-flex align-items-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="search-close-btn" id="closeBtn">
-                        <i class="pe-7s-close-circle" aria-hidden="true"></i>
-                    </div>
-                    <form action="#" method="get">
-                        <input type="search" name="caviarSearch" id="search" placeholder="Search Your Favourite Dish ...">
-                        <input type="submit" class="d-none" value="submit">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ***** Header Area Start ***** -->
+    <!-- Header Area Start -->
     <header class="header_area" id="header">
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-12 h-100">
                     <nav class="h-100 navbar navbar-expand-lg align-items-center">
                         <a class="navbar-brand" href="../../index.html">Justin Food</a>
+                        <!-- Botón para regresar -->
+                        <button class="btn btn-back" onclick="goBack()"><i class="fa fa-arrow-left"></i> Regresar</button>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#caviarNav" aria-controls="caviarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <div class="collapse navbar-collapse" id="caviarNav">
                             <ul class="navbar-nav ml-auto" id="caviarMenu">
@@ -80,111 +81,70 @@
                                         <a class="dropdown-item" href="contact.html">Contact</a>
                                     </div>
                                 </li>
-                                <li class="nav-item">
-                                </li>
-                                <li class="nav-item">
-                                </li>
-                                <li class="nav-item">
-                                </li>
-                                <li class="nav-item">
-                                </li>
-                                <li class="nav-item">
-                                </li>
-                                <li class="nav-item">
-                                </li>
+                                <li class="nav-item"></li>
+                                <li class="nav-item"></li>
+                                <li class="nav-item"></li>
+                                <li class="nav-item"></li>
+                                <li class="nav-item"></li>
+                                <li class="nav-item"></li>
+                                <li class="nav-item"></li>
                             </ul>
                             <!-- Search Btn -->
-                            <div class="caviar-search-btn">
-                            </div>
+                            <div class="caviar-search-btn"></div>
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    <!-- ***** Header Area End ***** -->
+    <!-- Header Area End -->
 
-<!-- ***** Breadcumb Area Start ***** -->
-<div id="home" class="breadcumb-area bg-img bg-overlay" style="background-image: url(../../img/bg-img/hero-2.jpg)">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="col-12">
-                <div class="breadcumb-content">
-                    <h1>Cafeteria</h1>
-                    <h2>Cetis 75</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- ***** Breadcumb Area End ***** -->
-<!-- ***** Checkout Area Start ***** -->
-<section class="caviar-checkout-area section-padding-100">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="checkout_details_area mt-50 clearfix">
-
-                    <div class="cart-title">
-                        <h2>Realizar Pedido</h2>
+    <!-- Breadcumb Area Start -->
+    <div id="home" class="breadcumb-area bg-img bg-overlay" style="background-image: url(../../img/bg-img/hero-2.jpg)">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcumb-content">
+                        <h1>Checkout</h1>
+                        <h2>Justin Food</h2>
                     </div>
-
-                    <form action="#" method="post">
-                        <div class="row">
-                            <div class="col-12 mb-3">
-                                <label for="food_item">Alimento</label>
-                                <select class="form-control" id="food_item" required>
-                                    <option value="">Seleccione un alimento</option>
-                                    <option value="pizza">Pizza</option>
-                                    <option value="hamburguesa">Hamburguesa</option>
-                                    <option value="ensalada">Ensalada</option>
-                                    <!-- Agrega más opciones según los alimentos disponibles -->
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="pickup_time">Hora de recogida</label>
-                                <input type="time" class="form-control" id="pickup_time" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="payment_method">Método de Pago</label>
-                                <select class="form-control" id="payment_method" required>
-                                    <option value="">Seleccione un método de pago</option>
-                                    <option value="efectivo">Efectivo</option>
-                                    <option value="tarjeta">Tarjeta de Crédito/Débito</option>
-                                </select>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <label for="comment">Comentarios (opcional)</label>
-                                <textarea name="comment" class="form-control" id="comment" cols="30" rows="3" placeholder="Agregue comentarios adicionales"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary" type="submit">Confirmar Pedido</button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<!-- ***** Checkout Area End ***** -->
+    <!-- Breadcumb Area End -->
 
-    <!-- ***** Footer Area Start ***** -->
+    <!-- Checkout Area Start -->
+    <main class="container mt-5">
+        <h1 class="mb-4">Checkout</h1>
+        <div id="checkout-items" class="mb-4">
+            <!-- Items will be listed here -->
+        </div>
+        <h2>Métodos de Pago</h2>
+        <div class="payment-methods">
+            <label>
+                <input type="radio" name="payment-method" value="credit-card" checked> Tarjeta de Crédito
+            </label>
+            <!-- Agregar otros métodos de pago si es necesario -->
+        </div>
+        <button class="btn btn-primary mt-4" onclick="completePurchase()">Completar Compra</button>
+    </main>
+    <!-- Checkout Area End -->
+
+    <!-- Footer Area Start -->
     <footer class="caviar-footer-area">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="footer-text">
                         <a href="#" class="navbar-brand"></a>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Justin Food App</a></p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p>&copy; <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Justin Food App</p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- ***** Footer Area Start ***** -->
+    <!-- Footer Area End -->
 
     <!-- jQuery-2.2.4 js -->
     <script src="jquery-2.2.4.min.js"></script>
@@ -196,5 +156,108 @@
     <script src="plugins.js"></script>
     <!-- Active js -->
     <script src="active.js"></script>
-    
+    <!-- MercadoPago js -->
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="server.js"></script>
+    <script>
+        // Inicializar MercadoPago
+        const mp = new MercadoPago('APP_USR-4777a5c9-03b2-490f-8ea9-8b9a17e96838', {
+            locale: 'es-AR'
+        });
+
+        // Recuperar el carrito desde localStorage
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Función para eliminar un producto del carrito
+        function removeFromCart(index) {
+            console.log(`Eliminando producto en el índice ${index} del carrito...`);
+            cart.splice(index, 1); // Eliminar el elemento del array
+            localStorage.setItem('cart', JSON.stringify(cart)); // Actualizar el carrito en localStorage
+            loadCheckoutItems(); // Volver a cargar los elementos del carrito en la página
+        }
+
+        // Función para cargar los elementos del carrito en el checkout
+        function loadCheckoutItems() {
+            const checkoutItems = document.getElementById('checkout-items');
+            checkoutItems.innerHTML = ''; // Limpiar el contenido previo
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('checkout-item', 'd-flex', 'justify-content-between', 'align-items-center', 'mb-3');
+                itemElement.innerHTML = `
+                    <div class="checkout-item-details">
+                        <h5>${item.name}</h5>
+                        <p>$${item.price}</p>
+                    </div>
+                    <button class="btn" onclick="removeFromCart(${index})"><i class="fa fa-trash text-danger"></i></button>`;
+                checkoutItems.appendChild(itemElement);
+                total += parseFloat(item.price);
+            });
+
+            const totalElement = document.createElement('div');
+            totalElement.classList.add('total');
+            totalElement.innerHTML = `<h4>Total: $${total.toFixed(2)}</h4>`;
+            checkoutItems.appendChild(totalElement);
+        }
+
+        // Función para completar la compra
+        function completePurchase() {
+            const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+            if (paymentMethod === "credit-card") {
+                // Crear preferencia de pago
+                const preference = {
+                    items: cart.map(item => ({
+                        title: item.name,
+                        unit_price: parseFloat(item.price),
+                        quantity: 1
+                    })),
+                    back_urls: {
+                        success: "URL_DE_EXITO",
+                        failure: "URL_DE_FRACASO",
+                        pending: "URL_PENDIENTE"
+                    },
+                    auto_return: "approved"
+                };
+
+                // Enviar preferencia de pago a tu backend
+                fetch('http://localhost:3000/api/create_preference', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(preference)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data && data.init_point) {
+                        // Redirigir al usuario al flujo de pago de MercadoPago
+                        window.location.href = data.init_point;
+                    } else {
+                        alert("Hubo un error al procesar el pago. Por favor, inténtalo de nuevo.");
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert("Hubo un error al procesar el pago. Por favor, inténtalo de nuevo.");
+                });
+            } else {
+                alert(`Compra completada usando ${paymentMethod}!`);
+                localStorage.removeItem('cart');
+                window.location.href = 'confirmation.html';
+            }
+        }
+
+        // Cargar los elementos del carrito al cargar la página
+        window.onload = function() {
+            console.log("Página de checkout cargada.");
+            loadCheckoutItems();
+        };
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
+
+</html>

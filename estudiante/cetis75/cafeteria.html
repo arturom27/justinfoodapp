@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -21,16 +20,86 @@
     <link href="responsive.css" rel="stylesheet">
     <link href="bootstrap.min.css" rel="stylesheet">
     <link href="animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="../../css/font-awesome/css/fontawesome.min.css" rel="stylesheet">
     <link href="magnific-popup.css" rel="stylesheet">
     <link href="owl.carousel.min.css" rel="stylesheet">
     <link href="pe-icon-7-stroke.css" rel="stylesheet">
     <link href="barra.css" rel="stylesheet">
 
+    <!-- CSS para el carrito -->
+    <style>
+        .cart-btn {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #af86fe;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+        .cart-btn:hover {
+            background-color: #8b6bc7;
+        }
+        .cart {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .cart-item {
+            display: none;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .cart-item button {
+            background-color: #af86fe;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 3px 7px;
+        }
+        .cart-icon {
+            position: relative;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .cart-icon .cart-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #af86fe;
+            color: white;
+            border-radius: 50%;
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+        .cart-icon {
+        position: relative;
+        margin-left: 20px;
+        cursor: pointer;
+        color: #ddd;
+    }
+    .cart-icon a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .cart-icon .fas {
+        font-size: 1.5rem;
+    }
+    .cart-icon .cart-count {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: #af86fe;
+        color: white;
+        border-radius: 50%;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
 
-
+    </style>
 </head>
-
 <body>
     <!-- Preloader -->
     <div id="preloader">
@@ -69,32 +138,14 @@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#caviarNav" aria-controls="caviarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <div class="collapse navbar-collapse" id="caviarNav">
                             <ul class="navbar-nav ml-auto" id="caviarMenu">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#home"> <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="index.html">Home</a>
-                                        <a class="dropdown-item" href="menu.html">Menu</a>
-                                        <a class="dropdown-item" href="regular-page.html">Regular Page</a>
-                                        <a class="dropdown-item" href="contact.html">Contact</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                </li>
-                                <li class="nav-item">
-                                </li>
-                                <li class="nav-item">
-                                </li>
-                                <li class="nav-item">
-                                </li>
-                                <li class="nav-item">
-                                </li>
-                                <li class="nav-item">
-                                </li>
+                                <!-- Other nav items -->
                             </ul>
-                            <!-- Search Btn -->
-                            <div class="caviar-search-btn">
+                            <!-- Cart Icon -->
+                            <div class="cart-icon">
+                                <a href="checkout.html">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span class="cart-count">0</span>
+                                </a>
                             </div>
                         </div>
                     </nav>
@@ -102,22 +153,23 @@
             </div>
         </div>
     </header>
+    
     <!-- ***** Header Area End ***** -->
 
-<!-- ***** Breadcumb Area Start ***** -->
-<div id="home" class="breadcumb-area bg-img bg-overlay" style="background-image: url(../../img/bg-img/hero-2.jpg)">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="col-12">
-                <div class="breadcumb-content">
-                    <h1>Cafeteria</h1>
-                    <h2>Cetis 75</h2>
+    <!-- ***** Breadcumb Area Start ***** -->
+    <div id="home" class="breadcumb-area bg-img bg-overlay" style="background-image: url(../../img/bg-img/hero-2.jpg)">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcumb-content">
+                        <h1>Cafeteria</h1>
+                        <h2>Cetis 75</h2>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- ***** Breadcumb Area End ***** -->
+    <!-- ***** Breadcumb Area End ***** -->
 
     <!-- ***** Menu Area Start ***** -->
     <div class="caviar-food-menu section-padding-150 clearfix">
@@ -142,6 +194,8 @@
                     <div class="caviar-menu-slides owl-carousel clearfix">
 
                         <div class="caviar-portfolio clearfix">
+
+                            
                             <div class="single_menu_item breakfast wow fadeInUp">
                                 <div class="d-sm-flex align-items-center">
                                     <div class="dish-thumb">
@@ -153,7 +207,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$25</h3>
-                                        <button class="add-to-cart" data-id="1" data-name="Sándwich de Jamón" data-price="25">Agregar al carrito</button>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -169,6 +223,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$30</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -184,6 +239,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$15</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -199,6 +255,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$20</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -214,6 +271,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$10</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -232,6 +290,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$18</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -247,6 +306,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$20</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -262,6 +322,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$12</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -277,6 +338,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$10</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -292,6 +354,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$15</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -310,6 +373,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$22</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -325,6 +389,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$20</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -340,6 +405,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$10</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -355,6 +421,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$22</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -370,6 +437,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$12</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -388,6 +456,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$18</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -403,6 +472,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$15</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -418,6 +488,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$8</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -433,6 +504,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$18</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -448,6 +520,7 @@
                                     </div>
                                     <div class="dish-value">
                                         <h3>$15</h3>
+                                        <button class="cart-btn">Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -504,6 +577,11 @@
     </section>
     <!-- ***** Special Menu Area End ***** -->
 
+    <div id="cart" class="cart">
+        <h3></h3>
+        <div id="cart-items"></div>
+    </div>
+
     <!-- ***** Footer Area Start ***** -->
     <footer class="caviar-footer-area">
         <div class="container">
@@ -521,6 +599,9 @@
     </footer>
     <!-- ***** Footer Area Start ***** -->
 
+    <!-- Cart display area -->
+
+
     <!-- jQuery-2.2.4 js -->
     <script src="jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
@@ -532,4 +613,68 @@
     <!-- Active js -->
     <script src="active.js"></script>
     
+    <script>
+        // Función para agregar elementos al carrito
+        function addToCart(name, price, imageUrl) {
+    console.log(`Agregando "${name}" al carrito...`);
+    const item = { name, price, imageUrl }; // Agrega la propiedad imageUrl al objeto item
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(item);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    displayCart();
+    updateCartCount();
+}
+
+        // Función para eliminar elementos del carrito
+        function removeFromCart(index) {
+            console.log(`Eliminando elemento ${index} del carrito...`);
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+            updateCartCount();
+        }
+
+        // Función para mostrar el carrito
+        function displayCart() {
+            console.log("Mostrando carrito...");
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.forEach((item, index) => {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <span>${item.name} - $${item.price}</span>
+                    <button onclick="removeFromCart(${index})">Eliminar</button>
+                `;
+                cartItems.appendChild(cartItem);
+            });
+        }
+
+        // Función para actualizar el contador del carrito
+        function updateCartCount() {
+            console.log("Actualizando contador del carrito...");
+            const cartCount = document.querySelector('.cart-count');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cartCount.textContent = cart.length;
+        }
+
+        // Evento para agregar elementos al carrito al hacer clic en el botón "Agregar al Carrito"
+        document.querySelectorAll('.cart-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const productName = this.parentElement.parentElement.querySelector(".dish-description h3").textContent;
+                const price = this.parentElement.querySelector("h3").textContent.replace('$', '');
+                addToCart(productName, price);
+            });
+        });
+                // Cargar carrito y contador al cargar la página
+                window.onload = function() {
+            console.log("Página de shopping cart cargada.");
+            displayCart();
+            updateCartCount();
+        };
+    </script>
 </body>
+
+</html>
