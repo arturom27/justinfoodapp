@@ -106,17 +106,26 @@
             .order-preloader-container {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 50%; /* Dejemos esto como estaba */
     transform: translate(-50%, -50%);
     display: none;
 }
 
+/* Estilos por defecto */
 .order-preloader {
-    background: rgba(255, 255, 255, 0.0);
-    margin-top: 20%;
-    text-align: center;
-    z-index: 999;
+    margin-left: 125px;
+    margin-right: -200px; /* Cambia el valor según sea necesario */
 }
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    .order-preloader {
+        margin-left: auto; /* Modifica según lo que necesites para dispositivos móviles */
+        margin-right: auto; /* Modifica según lo que necesites para dispositivos móviles */
+    }
+}
+
+
 
 
             .order-loader {
@@ -191,8 +200,8 @@
     position: fixed;
     z-index: 900;
     top: 0;
-    right: 100%;
-    width: 100%;
+    right: -50%;
+    width: 10%;
     height: 4px;
   }
   
